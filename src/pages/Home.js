@@ -1,5 +1,10 @@
 import Navbar from '../component/Navbar'
 import SearchBox from '../component/SearchBox';
+import SearchResults from '../component/SearchResults';
+
+// images
+import Dog from '../assets/dog.svg';
+import Cat from '../assets/cat.svg';
 
 const Home = () => {
   return (
@@ -19,7 +24,7 @@ const Home = () => {
               puppy, cat or kitten.
             </p>
           </div>
-          <div className="absolute">
+          <div className="absolute bottom-5">
             <SearchBox />
           </div>
         </div>
@@ -50,6 +55,44 @@ const Home = () => {
               />
             </div>
           </div>
+        </div>
+      </div>
+      <div className="md:px-16 px-5">
+        <SearchResults />
+      </div>
+      <div className="md:px-16 px-5 md:py-20">
+        <h1 className="text-3xl text-gray7 font-medium">Browse Though Pet Types</h1>
+        <div className="md:flex space-x-3 pt-5">
+          <button type="button" className="bg-appblue text-menugray bg-opacity-10 w-118px h-108px rounded-xl flex justify-center items-center">
+            <span className="block">
+              <img className="" src={Dog} alt="Dogs" />
+              <span className="block text-lg">Dog</span>
+            </span>
+          </button>
+          <button type="button" className="bg-appblue text-menugray bg-opacity-10 w-118px h-108px rounded-xl flex justify-center items-center">
+            <span className="block">
+              <img className="" src={Cat} alt="Cat" />
+              <span className="block text-lg">Cat</span>
+            </span>
+          </button>
+          <button type="button" className="bg-appblue text-menugray bg-opacity-10 w-118px h-108px rounded-xl flex justify-center items-center">
+            <span className="block">
+              <img className="" src={Cat} alt="Cat" />
+              <span className="block text-lg">Cat</span>
+            </span>
+          </button>
+          <button type="button" className="bg-appblue text-menugray bg-opacity-10 w-118px h-108px rounded-xl flex justify-center items-center">
+            <span className="block">
+              <img className="" src={Cat} alt="Cat" />
+              <span className="block text-lg">Cat</span>
+            </span>
+          </button>
+          <button type="button" className="bg-appblue text-menugray bg-opacity-10 w-118px h-108px rounded-xl flex justify-center items-center">
+            <span className="block">
+              <img className="" src={Cat} alt="Cat" />
+              <span className="block text-lg">Cat</span>
+            </span>
+          </button>
         </div>
       </div>
     </div>

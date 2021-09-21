@@ -5,12 +5,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        grayfade: '#AFB6C1',
         gray1: '#F8FAFD',
+        gray2: '#8588A3',
         gray3: '#58667E',
         gray6: '#344062',
+        gray7: '#666879',
+        graywhite: '#F0F6FF',
         appblue: '#0D75FF',
         appred: '#CB2E42',
         kiwi: '#0e182a',
+        menugray: '#5F6472'
       },
       fontSize: {
         '6px': ['0.375rem', { lineHeight: '1rem' }],
@@ -21,6 +26,7 @@ module.exports = {
         'inter': ['Inter', 'sans-serif'],
       },
       height: () => ({
+        '108px': '108px',
         '215px': '215px',
         '308px': '308px',
         '400px': '400px',
@@ -30,6 +36,7 @@ module.exports = {
         '770px': '770px'
       }),
       width: () => ({
+        '118px': '118px',
         '227px': '227px',
         '270px': '270px',
         '350px': '350px',
