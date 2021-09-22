@@ -15,7 +15,9 @@ module.exports = {
         appblue: '#0D75FF',
         appred: '#CB2E42',
         kiwi: '#0e182a',
-        menugray: '#5F6472'
+        menugray: '#5F6472',
+        footergray: '#F3F5FB',
+        footergray2: '#616681'
       },
       fontSize: {
         '6px': ['0.375rem', { lineHeight: '1rem' }],
@@ -30,7 +32,7 @@ module.exports = {
         '215px': '215px',
         '308px': '308px',
         '400px': '400px',
-        '555px': '555px',
+        '535px': '535px',
         '616px': '616px',
         '680px': '680px',
         '770px': '770px'

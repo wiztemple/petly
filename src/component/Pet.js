@@ -1,15 +1,15 @@
 import Dog from '../assets/dog.svg'
 const Pet = ({ name, image, animal, breed, location }) => {
   return (
-    <div className="bg-white border border-graywhite px-5 py-5 rounded-xl">
+    <div className="bg-white dark:bg-kiwi border border-graywhite dark:border-gray-800 px-5 py-5 rounded-xl">
       <img
         src={image}
         className="w-full h-48 rounded-xl object-cover"
         alt="pet" />
       <div className="flex justify-between items-center py-3">
         <span className="block">
-          <h1 className="text-2xl text-gray3 font-medium m-0">{name}</h1>
-          <span className="text-sm text-gray7 block leading-none relative -top-1">{breed}</span>
+          <h1 className="text-2xl text-gray3 font-medium m-0 dark:text-white">{name}</h1>
+          <span className="text-sm text-gray7 block leading-none relative -top-1 dark:text-gray-400">{breed}</span>
         </span>
         <img src={Dog} alt={animal} />
       </div>
