@@ -8,7 +8,6 @@ const SearchBox = () => {
   const [location, setLocation] = useState('');
   const [animal, setAnimal] = useState('');
   const [breed, setBreed] = useState('');
-  // eslint-disable-next-line no-unused-vars
   const [pets, setPets] = useState([]);
   const [breeds] = useBreedList(animal);
 

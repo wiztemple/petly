@@ -1,12 +1,15 @@
 import { useState, useEffect } from "react";
 import useBreedList from '../hooks/useBreedList';
 import Navbar from '../component/Navbar'
-import SearchResults from '../component/SearchResults';
+import SearchResults from '../component/SearchResults'
+import Footer from '../component/Footer';
 
 // images
 import Dog from '../assets/dog.svg';
 import Cat from '../assets/cat.svg';
-import Footer from '../component/Footer';
+import Bird from '../assets/bird.svg';
+import Rabbit from '../assets/rabbit.svg';
+import Reptile from '../assets/reptile.svg';
 
 const ANIMALS = ["bird", "cat", "dog", "rabbit", "reptile"];
 const LOCATIONS = [
@@ -26,6 +29,12 @@ const Home = () => {
   const [breed, setBreed] = useState('');
   const [pets, setPets] = useState([]);
   const [breeds] = useBreedList(animal);
+  const [setActive, setActiveState] = useState('Dog');
+  const toggleTab = (event) => {
+    const { value } = event.currentTarget.dataset;
+
+    setActiveState(() => value);
+  };
 
   useEffect(() => {
     requestPets()
@@ -189,36 +198,72 @@ const Home = () => {
       <div className="md:px-16 px-5 md:py-20">
         <h1 className="text-3xl text-gray7 font-medium">Browse Though Pet Types</h1>
         <div className="md:flex space-x-3 pt-5">
-          <button type="button" className="bg-appblue text-menugray bg-opacity-10 w-118px h-108px rounded-xl flex justify-center items-center">
+          <button
+            type="button"
+            className={`bg-graywhite text-menugray w-118px h-108px border-2 border-transparent rounded-xl flex justify-center items-center ${setActive === 'Dog' && 'active border-2 border-blue-200'}`}
+            onClick={toggleTab}
+            id="Dog"
+            data-value="Dog"
+          >
             <span className="block">
               <img className="" src={Dog} alt="Dogs" />
               <span className="block text-lg">Dog</span>
             </span>
           </button>
-          <button type="button" className="bg-appblue text-menugray bg-opacity-10 w-118px h-108px rounded-xl flex justify-center items-center">
+          <button
+            type="button"
+            className={`bg-graywhite text-menugray w-118px h-108px rounded-xl flex justify-center items-center ${setActive === 'Cat' && 'active border-2 border-blue-200'}`}
+            onClick={toggleTab}
+            id="Cat"
+            data-value="Cat"
+          >
             <span className="block">
               <img className="" src={Cat} alt="Cat" />
               <span className="block text-lg">Cat</span>
             </span>
           </button>
-          <button type="button" className="bg-appblue text-menugray bg-opacity-10 w-118px h-108px rounded-xl flex justify-center items-center">
+          <button
+            type="button"
+            className={`bg-graywhite text-menugray w-118px h-108px rounded-xl flex justify-center items-center ${setActive === 'Bird' && 'active border-2 border-blue-200'}`}
+            onClick={toggleTab}
+            id="Bird"
+            data-value="Bird"
+          >
             <span className="block">
-              <img className="" src={Cat} alt="Cat" />
-              <span className="block text-lg">Cat</span>
+              <img className="" src={Bird} alt="Bird" />
+              <span className="block text-lg">Bird</span>
             </span>
           </button>
-          <button type="button" className="bg-appblue text-menugray bg-opacity-10 w-118px h-108px rounded-xl flex justify-center items-center">
+          <button
+            type="button"
+            className={`bg-graywhite text-menugray w-118px h-108px rounded-xl flex justify-center items-center ${setActive === 'Rabbit' && 'active border-2 border-blue-200'}`}
+            onClick={toggleTab}
+            id="Rabbit"
+            data-value="Rabbit"
+          >
             <span className="block">
-              <img className="" src={Cat} alt="Cat" />
-              <span className="block text-lg">Cat</span>
+              <img src={Rabbit} alt="Rabbit" />
+              <span className="block text-lg">Rabbit</span>
             </span>
           </button>
-          <button type="button" className="bg-appblue text-menugray bg-opacity-10 w-118px h-108px rounded-xl flex justify-center items-center">
+          <button
+            type="button"
+            className={`bg-graywhite text-menugray w-118px h-108px rounded-xl flex justify-center items-center ${setActive === 'Reptile' && 'active border-2 border-blue-200'}`}
+            onClick={toggleTab}
+            id="Reptile"
+            data-value="Reptile"
+          >
             <span className="block">
-              <img className="" src={Cat} alt="Cat" />
-              <span className="block text-lg">Cat</span>
+              <img src={Reptile} alt="Reptile" />
+              <span className="block text-lg">Reptile</span>
             </span>
           </button>
+        </div>
+        <div>
+          {setActive === 'Dog' &&
+            (
+              <div>s</div>
+            )}
         </div>
       </div>
       <Footer />

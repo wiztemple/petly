@@ -17,7 +17,7 @@ module.exports = {
         kiwi: '#0e182a',
         menugray: '#5F6472',
         footergray: '#F3F5FB',
-        footergray2: '#616681'
+        footergray2: '#616681',
       },
       fontSize: {
         '6px': ['0.375rem', { lineHeight: '1rem' }],
