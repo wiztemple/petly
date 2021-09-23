@@ -10,6 +10,8 @@ import Cat from '../assets/cat.svg';
 import Bird from '../assets/bird.svg';
 import Rabbit from '../assets/rabbit.svg';
 import Reptile from '../assets/reptile.svg';
+import Pet from "../component/Pet";
+import PetsLoader from "../component/PetsLoader";
 
 const ANIMALS = ["bird", "cat", "dog", "rabbit", "reptile"];
 const LOCATIONS = [
@@ -30,27 +32,34 @@ const Home = () => {
   const [pets, setPets] = useState([]);
   const [breeds] = useBreedList(animal);
   const [setActive, setActiveState] = useState('Dog');
+
+  const [filteredPets, setFilteredPets] = useState([]);
+  const [loadingFilteredPets, setLoadingFilteredPets] = useState(true);
+
   const toggleTab = (event) => {
     const { value } = event.currentTarget.dataset;
 
     setActiveState(() => value);
+    filterPets((value.toLowerCase()))
   };
-
+  // http://pets-v2.dev-apis.com/pets?page=1
   useEffect(() => {
-    requestPets()
+    requestPets(),
+      filterPets('dog')
   }, [])
+
   async function requestPets() {
     const res = await fetch(`http://pets-v2.dev-apis.com/pets?animal=${animal}&location=${location}&breed=${breed}`)
     const json = await res.json()
-    console.log(json);
     setPets(json.pets)
   }
-  // async function filterPets() {
-  //   const res = await fetch(`http://pets-v2.dev-apis.com/pets?animal=${animal}`)
-  //   const json = await res.json()
-  //   console.log(json);
-  //   setPets(json.pets)
-  // }
+  async function filterPets(animalType) {
+    const res = await fetch(`http://pets-v2.dev-apis.com/pets?animal=${animalType}`)
+    const json = await res.json()
+    console.log(json);
+    setLoadingFilteredPets(false)
+    setFilteredPets(json.pets)
+  }
   return (
     <>
       <Navbar />
@@ -206,7 +215,7 @@ const Home = () => {
             data-value="Dog"
           >
             <span className="block">
-              <img className="" src={Dog} alt="Dogs" />
+              <img src={Dog} alt="Dogs" />
               <span className="block text-lg">Dog</span>
             </span>
           </button>
@@ -218,7 +227,7 @@ const Home = () => {
             data-value="Cat"
           >
             <span className="block">
-              <img className="" src={Cat} alt="Cat" />
+              <img src={Cat} alt="Cat" />
               <span className="block text-lg">Cat</span>
             </span>
           </button>
@@ -230,7 +239,7 @@ const Home = () => {
             data-value="Bird"
           >
             <span className="block">
-              <img className="" src={Bird} alt="Bird" />
+              <img src={Bird} alt="Bird" />
               <span className="block text-lg">Bird</span>
             </span>
           </button>
@@ -260,11 +269,100 @@ const Home = () => {
           </button>
         </div>
         <div>
+          <h1 className="text-4xl font-semibold md:pt-16 text-gray3 dark:text-gray-300">{setActive + 's'}</h1>
+          {loadingFilteredPets ? (<PetsLoader />) : null}
           {setActive === 'Dog' &&
             (
-              <div>s</div>
+              <div className="md:grid grid-cols-3 gap-10 w-full md:space-y-0 space-y-4 mt-5">
+                {filteredPets?.map(filteredPet => {
+                  return <Pet
+                    key={filteredPet.id}
+                    name={filteredPet.name}
+                    image={filteredPet.images[0]}
+                    location={filteredPet.location}
+                    breed={filteredPet.breed}
+                    city={filteredPet.city}
+                    state={filteredPet.state}
+                    animal={filteredPet.animal}
+                    id={filteredPet.id}
+                  />
+                })}
+              </div>
+            )}
+          {setActive === 'Cat' &&
+            (
+              <div className="md:grid grid-cols-3 gap-10 w-full md:space-y-0 space-y-4 mt-5">
+                {filteredPets?.map(filteredPet => {
+                  return <Pet
+                    key={filteredPet.id}
+                    name={filteredPet.name}
+                    image={filteredPet.images[0]}
+                    location={filteredPet.location}
+                    breed={filteredPet.breed}
+                    city={filteredPet.city}
+                    state={filteredPet.state}
+                    animal={filteredPet.animal}
+                    id={filteredPet.id}
+                  />
+                })}
+              </div>
+            )}
+          {setActive === 'Rabbit' &&
+            (
+              <div className="md:grid grid-cols-3 gap-10 w-full md:space-y-0 space-y-4 mt-5">
+                {filteredPets?.map(filteredPet => {
+                  return <Pet
+                    key={filteredPet.id}
+                    name={filteredPet.name}
+                    image={filteredPet.images[0]}
+                    location={filteredPet.location}
+                    breed={filteredPet.breed}
+                    city={filteredPet.city}
+                    state={filteredPet.state}
+                    animal={filteredPet.animal}
+                    id={filteredPet.id}
+                  />
+                })}
+              </div>
+            )}
+          {setActive === 'Bird' &&
+            (
+              <div className="md:grid grid-cols-3 gap-10 w-full md:space-y-0 space-y-4 mt-5">
+                {filteredPets?.map(filteredPet => {
+                  return <Pet
+                    key={filteredPet.id}
+                    name={filteredPet.name}
+                    image={filteredPet.images[0]}
+                    location={filteredPet.location}
+                    breed={filteredPet.breed}
+                    city={filteredPet.city}
+                    state={filteredPet.state}
+                    animal={filteredPet.animal}
+                    id={filteredPet.id}
+                  />
+                })}
+              </div>
+            )}
+          {setActive === 'Reptile' &&
+            (
+              <div className="md:grid grid-cols-3 gap-10 w-full md:space-y-0 space-y-4 mt-5">
+                {filteredPets?.map(filteredPet => {
+                  return <Pet
+                    key={filteredPet.id}
+                    name={filteredPet.name}
+                    image={filteredPet.images[0]}
+                    location={filteredPet.location}
+                    breed={filteredPet.breed}
+                    city={filteredPet.city}
+                    state={filteredPet.state}
+                    animal={filteredPet.animal}
+                    id={filteredPet.id}
+                  />
+                })}
+              </div>
             )}
         </div>
+
       </div>
       <Footer />
     </>

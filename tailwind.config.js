@@ -18,27 +18,30 @@ module.exports = {
         menugray: '#5F6472',
         footergray: '#F3F5FB',
         footergray2: '#616681',
+        loadergray: '#E9EEF5',
+        petnamegray: '#F0F6FF'
       },
       fontSize: {
         '6px': ['0.375rem', { lineHeight: '1rem' }],
-        '9px': ['0.563rem', { lineHeight: '1rem' }],
-        '10px': ['0.625rem', { lineHeight: '1rem' }]
       },
       fontFamily: {
         'inter': ['Inter', 'sans-serif'],
       },
       height: () => ({
+        '97px': '97px',
         '108px': '108px',
-        '215px': '215px',
+        '247px': '247px',
         '308px': '308px',
         '400px': '400px',
         '535px': '535px',
         '616px': '616px',
         '680px': '680px',
-        '770px': '770px'
+        '770px': '770px',
+        '85percent': '85%'
       }),
       width: () => ({
         '118px': '118px',
+        '158px': '158px',
         '227px': '227px',
         '270px': '270px',
         '350px': '350px',

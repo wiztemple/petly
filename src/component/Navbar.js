@@ -13,7 +13,7 @@ const Navbar = () => {
     <>
       <nav
         aria-label="primary"
-        className="w-full flex bg-white items-center justify-between flex-wrap px-5 dark:bg-gray-900 md:px-16 py-2 md:py-4 fixed shadow-sm"
+        className="w-full flex bg-white items-center justify-between flex-wrap px-5 dark:bg-gray-900 md:px-16 py-2 md:py-4 fixed shadow-sm z-10"
       >
         <div className="flex items-center flex-shrink-0 text-white">
           <Link to="/">
