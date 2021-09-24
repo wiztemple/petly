@@ -35,7 +35,7 @@ const PetDetails = () => {
           </svg>
         </Link>
       </div>
-      <div className="flex bg-white h-screen w-screen rounded-tl-3xl rounded-tr-3xl relative top-36">
+      <div className="flex bg-white w-screen rounded-tl-3xl rounded-tr-3xl relative h-full top-36">
         <div className="md:w-1/6" />
         <div className="md:w-4/6">
           <div className="flex justify-between md:py-10">

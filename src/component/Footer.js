@@ -6,26 +6,26 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <div className="w-screen h-535px bg-footergray relative">
-      <img className="absolute left-0" src={BallRolls} alt="Ball Rolls" />
-      <img className="absolute left-36 bottom-36" src={Fan} alt="Fan" />
-      <img className="absolute right-0" src={Angle} alt="Inverted Angles" />
-      <img className="absolute right-32 top-48" src={BallRolls} alt="Ball Rolls" />
+    <div className="w-screen md:h-535px bg-footergray dark:bg-kiwi2 relative p-5 md:p-0">
+      <img className="md:block hidden absolute left-0" src={BallRolls} alt="Ball Rolls" />
+      <img className="md:block hidden absolute left-36 bottom-36" src={Fan} alt="Fan" />
+      <img className="md:block hidden absolute right-0" src={Angle} alt="Inverted Angles" />
+      <img className="md:block hidden absolute right-32 top-48" src={BallRolls} alt="Ball Rolls" />
       <div className="flex justify-center">
-        <div className="md:pt-44">
-          <h1 className="text-6xl font-semibold text-gray3"><span className="text-appblue font-bold">Need</span> help with <br /> Adopting a pet?</h1>
+        <div className="md:pt-44 pt-10">
+          <h1 className="md:text-6xl text-3xl font-semibold text-gray3 dark:text-gray1"><span className="text-appblue font-bold">Need</span> help with <br /> Adopting a pet?</h1>
           <button type="button" className="bg-appblue text-white text-sm px-10 py-4 rounded-full shadow mt-5 hover:bg-opacity-90">
             View all pets
           </button>
 
         </div>
       </div>
-      <div className="flex justify-between items-start md:pt-24 md:px-20 px-5">
+      <div className="md:flex justify-between items-start md:pt-24 md:pb-0 pb-16 pt-12 md:px-20">
         <Link to="/">
           <img className="block" src={Logo} alt="Logo" />
         </Link>
         <div>
-          <div className="flex items-center space-x-5 md:ml-24">
+          <div className="flex items-center space-x-5 md:ml-24 pt-5 md:pt-0">
             <a href="s">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M9.999 0C4.477 0 0 4.50448 0 10.0604C0 15.081 3.656 19.2424 8.437 20V12.9691H5.897V10.0604H8.437V7.84385C8.437 5.32046 9.93 3.92897 12.213 3.92897C13.307 3.92897 14.453 4.12516 14.453 4.12516V6.59926H13.189C11.949 6.59926 11.561 7.37599 11.561 8.17185V10.0584H14.332L13.889 12.9671H11.561V19.998C16.342 19.2444 19.998 15.082 19.998 10.0604C19.998 4.50448 15.521 0 9.999 0Z" fill="#58667E" />

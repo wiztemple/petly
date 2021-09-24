@@ -15,11 +15,13 @@ module.exports = {
         appblue: '#0D75FF',
         appred: '#CB2E42',
         kiwi: '#0e182a',
+        kiwi2: '#182039',
         menugray: '#5F6472',
         footergray: '#F3F5FB',
         footergray2: '#616681',
         loadergray: '#E9EEF5',
-        petnamegray: '#F0F6FF'
+        petnamegray: '#F0F6FF',
+        themeborder: '#E7EDFD'
       },
       fontSize: {
         '6px': ['0.375rem', { lineHeight: '1rem' }],
@@ -30,6 +32,7 @@ module.exports = {
       height: () => ({
         '97px': '97px',
         '108px': '108px',
+        '215px': '215px',
         '247px': '247px',
         '308px': '308px',
         '400px': '400px',

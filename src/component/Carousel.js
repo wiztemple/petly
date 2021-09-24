@@ -3,7 +3,7 @@ import { useState } from 'react'
 const Carousel = ({ images }) => {
   const [active, setActive] = useState(0);
 
-  const handleIndexClick = (event) => setActive(+event.target.dataset.index);
+  const handleIndexClick = (event) => setActive(event.target.dataset.index);
 
   return (
     <div>

@@ -1,11 +1,15 @@
 import { Link } from 'react-router-dom';
 import getAnimalIcon from '../util/getAnimalIcon';
 
-const Pet = ({ name, image, animal, breed, city, state, id }) => {
+const Pet = ({ name, images, animal, breed, city, state, id }) => {
+  let hero = 'http://pets-images.dev-apis.com/pets/none.jpg';
+  if (images.length) {
+    hero = images[0]
+  }
   return (
     <div className="bg-white dark:bg-kiwi border border-graywhite dark:border-gray-800 px-5 py-5 rounded-xl">
       <img
-        src={image}
+        src={hero}
         className="w-full h-48 rounded-xl object-cover"
         alt="pet" />
       <div className="flex justify-between items-center py-3">
