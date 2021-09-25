@@ -7,7 +7,7 @@ const Carousel = ({ images }) => {
 
   return (
     <div>
-      <div className="shadow-sm bg-white w-full p-5 rounded-lg">
+      <div className="shadow-sm bg-white dark:bg-kiwi2 w-full p-5 rounded-lg">
         <img src={images[active]} className="h-247px object-cover w-full" alt="Carousel Images" />
       </div>
       <div className="flex items-center space-x-3 py-4">

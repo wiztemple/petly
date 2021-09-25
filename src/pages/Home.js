@@ -51,15 +51,13 @@ const Home = () => {
   }, [])
 
   async function requestPets() {
-    const res = await fetch(`http://pets-v2.dev-apis.com/pets?animal=${animal}&location=${location}&breed=${breed}`)
-    const json = await res.json()
+    // const res = await fetch(`http://pets-v2.dev-apis.com/pets?animal=${animal}&location=${location}&breed=${breed}`)
+    const json = await fetchJSON(`http://pets-v2.dev-apis.com/pets?animal=${animal}&location=${location}&breed=${breed}`)
     setLoading(false)
     setPets(json.pets)
   }
   async function filterPets(animalType) {
     const json = await fetchJSON(`http://pets-v2.dev-apis.com/pets?animal=${animalType}`)
-    // const res = await fetch(`http://pets-v2.dev-apis.com/pets?animal=${animalType}`)
-    // const json = await res.json()
     console.log(json);
     setLoadingFilteredPets(false)
     setFilteredPets(json.pets)
