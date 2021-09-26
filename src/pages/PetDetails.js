@@ -15,7 +15,7 @@ const PetDetails = () => {
     getPet()
   })
   async function getPet() {
-    const res = await fetch(`http://pets-v2.dev-apis.com/pets?id=${id}`);
+    const res = await fetch(`https://pets-v2.dev-apis.com/pets?id=${id}`);
     const json = await res.json();
     console.log(json)
     setLoading(false)
