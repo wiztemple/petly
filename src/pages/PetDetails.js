@@ -28,19 +28,19 @@ const PetDetails = () => {
       <div className="flex bg-white dark:bg-kiwi py-24">
         <div className="md:w-1/6" />
         <div className="md:w-4/6">
-          <div className="flex justify-between md:py-10">
+          <div className="flex justify-between md:py-10 px-5">
             <div className="flex space-x-4 items-center">
-              <span className="flex justify-center items-center w-20 h-20 bg-petnamegray dark:bg-kiwi2 rounded-full">
-                <span className="block text-gray3 dark:text-gray1 text-5xl font-semibold">{name?.charAt(0)}</span>
+              <span className="flex justify-center items-center md:w-20 md:h-20 w-12 h-12 bg-petnamegray dark:bg-kiwi2 rounded-full">
+                <span className="block text-gray3 dark:text-gray1 md:text-5xl text-2xl font-semibold">{name?.charAt(0)}</span>
               </span>
               <span className="block">
-                <h1 className="text-gray6 dark:text-gray-400 text-5xl font-semibold">{name}</h1>
+                <h1 className="text-gray6 dark:text-gray-400 md:text-5xl text-2xl font-semibold">{name}</h1>
                 <span className="text-gray2 font-medium">{breed} {animal}</span>
               </span>
             </div>
             <img src={getAnimalIcon(animal)} alt={animal} />
           </div>
-          <div className="bg-gray1 dark:bg-kiwi2 px-8 py-8 relative rounded-lg">
+          <div className="bg-gray1 dark:bg-kiwi2 px-8 py-8 relative rounded-lg mt-3">
             {loading}
             <h1 className="text-3xl text-gray3 font-medium pb-8">{name} Pictures</h1>
             <Carousel images={images} />
