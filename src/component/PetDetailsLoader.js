@@ -1,6 +1,6 @@
 const PetDetailsLoader = () => {
   return (
-    <div className="animate-pulse">
+    <div className="animate-pulse w-full">
       <div className="flex justify-between items-center md:py-10 px-5">
         <div className="flex space-x-4 items-center">
           <span className="flex justify-center items-center md:w-20 md:h-20 w-12 h-12 bg-petnamegray dark:bg-kiwi2 rounded-full">

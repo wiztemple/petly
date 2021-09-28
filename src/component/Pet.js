@@ -11,7 +11,7 @@ const Pet = ({ name, images, animal, breed, city, state, id }) => {
       <img
         src={hero}
         className="w-full h-48 rounded-xl object-cover"
-        alt="pet" />
+        alt={name} />
       <div className="flex justify-between items-center py-3">
         <span className="block">
           <h1 className="text-2xl text-gray3 font-medium m-0 dark:text-white">{name}</h1>
