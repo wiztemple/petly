@@ -1,8 +1,8 @@
 import BallRolls from '../assets/ballrolls.svg';
 import Angle from '../assets/angle.svg';
 import Fan from '../assets/fan.svg';
-import Logo from '../assets/logo.svg';
 import { Link } from 'react-router-dom';
+import Logo from './Logo';
 
 const Footer = () => {
   return (
@@ -22,7 +22,7 @@ const Footer = () => {
       </div>
       <div className="md:flex justify-between items-start md:pt-24 md:pb-0 pb-16 pt-12 md:px-20">
         <Link to="/">
-          <img className="block" src={Logo} alt="Logo" />
+          <Logo />
         </Link>
         <div>
           <div className="flex items-center space-x-5 md:ml-24 pt-5 md:pt-0">
