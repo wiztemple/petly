@@ -1,6 +1,6 @@
 const PetsLoader = () => {
   return (
-    <div className="md:grid grid-cols-3 gap-10 w-full md:space-y-0 space-y-4 mt-5">
+    <div className="animate-pulse md:grid grid-cols-3 gap-10 w-full md:space-y-0 space-y-4 mt-5">
       <div className="bg-white dark:bg-kiwi border border-graywhite dark:border-kiwi2 px-5 py-5 rounded-xl">
         <div
           className="bg-loadergray dark:bg-kiwi2 w-full h-48 rounded-xl" />

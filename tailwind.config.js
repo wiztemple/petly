@@ -57,6 +57,12 @@ module.exports = {
         min: 'min-content',
         max: 'max-content',
       }),
+      borderRadius: () => ({
+        '100px': '100px'
+      }),
+      boxShadow: () => ({
+        shadow1: '0px 1px 2px rgba(0, 0, 0, 0.1)'
+      })
     },
   },
   variants: {

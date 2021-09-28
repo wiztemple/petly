@@ -48,7 +48,7 @@ const PetDetails = () => {
                   <div className="bg-gray1 dark:bg-kiwi2 px-8 py-8 relative rounded-lg mt-3">
                     <h1 className="text-3xl text-gray3 dark:text-gray-400 font-medium pb-8">{name} Pictures</h1>
                     <Carousel images={images} />
-                    <div className="bg-white dark:bg-kiwi shadow-sm rounded p-5 mt-8">
+                    <div className="bg-white dark:bg-kiwi shadow-shadow1 rounded p-5 mt-8">
                       <h1 className="text-2xl text-gray3 dark:text-gray-300 font-medium">Description</h1>
                       <p className="text-sm text-gray3 dark:text-gray-400 leading-relaxed pt-2">{description}</p>
                       <span className="w-52 flex space-x-2 items-center shadow-sm mt-2 text-sm text-appblue bg-petnamegray dark:bg-kiwi2 rounded-sm px-4 py-3">

@@ -178,7 +178,7 @@ const Home = () => {
           <div className="pb-12 md:pb-0">
             <div className="flex -space-x-1">
               <img
-                className="md:h-215px md:w-227px w-32 h-32 object-cover rounded-tl-full"
+                className="md:h-215px md:w-227px w-32 h-32 object-cover rounded-tl-100px"
                 src="https://images.unsplash.com/photo-1574158622682-e40e69881006?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Y2F0fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
                 alt="Cat"
               />
@@ -195,7 +195,7 @@ const Home = () => {
                 alt="Dog"
               />
               <img
-                className="md:h-215px md:w-227px w-32 h-32 object-cover rounded-br-full"
+                className="md:h-215px md:w-227px w-32 h-32 object-cover rounded-br-100px"
                 src="https://images.unsplash.com/photo-1597926661974-69a26ffa0f08?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDl8fGJpcmR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
                 alt="Bird"
               />
