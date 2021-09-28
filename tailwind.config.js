@@ -20,8 +20,9 @@ module.exports = {
         footergray: '#F3F5FB',
         footergray2: '#616681',
         loadergray: '#E9EEF5',
+        loadergray2: '#DBE2F4',
         petnamegray: '#F0F6FF',
-        themeborder: '#E7EDFD'
+        themeborder: '#E7EDFD',
       },
       fontSize: {
         '6px': ['0.375rem', { lineHeight: '1rem' }],
@@ -50,6 +51,7 @@ module.exports = {
         '350px': '350px',
         '553px': '553px',
         '780px': '780px',
+        '85percent': '85%',
         full: '100%',
         screen: '100vw',
         min: 'min-content',

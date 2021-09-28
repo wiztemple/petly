@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import PetDetails from './pages/PetDetails'
 import './App.css';
 import Background from './component/Background';
+import ScrollToTop from './component/ScrollToTop';
 
 const routes = [
   {
@@ -27,10 +28,12 @@ function App() {
       <ThemeProvider>
         <Background>
           <Router>
-            <Switch>
-              {routes}
-              <Redirect to="/" />
-            </Switch>
+            <ScrollToTop>
+              <Switch>
+                {routes}
+                <Redirect to="/" />
+              </Switch>
+            </ScrollToTop>
           </Router>
         </Background>
       </ThemeProvider>
