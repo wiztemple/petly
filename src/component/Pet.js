@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import getAnimalIcon from '../util/getAnimalIcon';
 
-const Pet = ({ name, images, animal, breed, city, state, id }) => {
-  let hero = 'http://pets-images.dev-apis.com/pets/none.jpg';
+const Pet = ({ name, animal, images, breed, city, state, id }) => {
+  let hero = 'https://media.istockphoto.com/photos/group-of-different-kind-of-pets-like-cat-dog-rabbit-mouse-chinchilla-picture-id1283692900?b=1&k=20&m=1283692900&s=170667a&w=0&h=iZhc8RaOPHi47ke8oSSbxdCw0ulJsVJJCNTYzdOrXQk=';
   if (images.length) {
     hero = images[0]
   }
